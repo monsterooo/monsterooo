@@ -27,6 +27,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: createthink_net
 github_username:  monsterooo
 
+# pages
+header_pages: 
+  - Home
+  - About
+
 # Build settings
 theme: minima
 plugins:
