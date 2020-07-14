@@ -24,14 +24,14 @@ description: >- # this means to ignore newlines until "baseurl:"
   学习和分享知识 :)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: createthink_net
-github_username:  monsterooo
+twitter_username:
+github_username:
 
-# pages
-header_pages: 
-  - Home
-  - About
-
+minima:
+  social_links:
+    github:  monsterooo
+    twitter: createthink_net
+    
 # Build settings
 theme: minima
 plugins:
