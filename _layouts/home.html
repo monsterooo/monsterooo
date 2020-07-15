@@ -2,13 +2,12 @@
 layout: default
 ---
 
-<div class="home">
+<div class="text-left">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <h1 class="text-4xl font-extrabold mt-8 mb-4">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
-
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
@@ -16,21 +15,21 @@ layout: default
     {% assign posts = site.posts %}
   {% endif %}
 
-
   {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
-    <ul class="post-list">
+    <ul>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
+      <li class="border-t border-gray-200 border-solid">
+        <h3 class="mt-5 mb-0 text-lg">
+          <a href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
+        <div class="text-gray-500 my-2">{{ post.date | date: date_format }}</div>
+        <p class="my-5">{{post.preview}}</p>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}

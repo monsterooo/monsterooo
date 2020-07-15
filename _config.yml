@@ -31,7 +31,7 @@ minima:
   social_links:
     github:  monsterooo
     twitter: createthink_net
-    
+
 # Build settings
 theme: minima
 plugins:
